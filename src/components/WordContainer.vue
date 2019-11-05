@@ -3,7 +3,7 @@
     <section class='prompt' v-if='!this.synonyms.length'>
       Enter a word in the form above to find its synonyms!
     </section>
-    <section class='word-card' v-else-if='this.synonyms.length' v-for='(synonym) in this.synonyms' v-bind:key='(synonym)'>
+    <section class='word-card' v-else-if='this.synonyms.length' v-for='(synonym) in this.synonyms' v-bind:key='(synonym + 1)'>
       <h3 v-on:click='changeWord(synonym.meta.id)'>{{synonym.meta.id}}</h3>
     </section>
   </main>
